@@ -27,6 +27,7 @@ h1 {
   border-top: 1px solid rgba(189, 187, 187, 0.637);
   color: rgb(14, 96, 219);
   transition: color .2s ease-out;
+  cursor: pointer;
 }
 
 .mem-item:hover .mem-img {
@@ -58,9 +59,17 @@ h1 {
 }
 
 .mem-img {
-  width: 100%;
+  width: 400px;
+  height: 400px;
   display: none;
   animation: show 1.5s forwards;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  /* display: block; */
+  margin: 0 auto;
 }
 
 @keyframes show {
@@ -73,7 +82,43 @@ h1 {
   }
 }
 
-.mem-img img {
+/* .mem-img img {
   display: block;
   margin: 0 auto;
+} */
+
+.mem-input:checked ~ .mem-img {
+  display: block;
+}
+
+.mem-input:checked + .mem-title {
+  color: black;
+}
+
+.mem-input:checked + .mem-title .mem-icon {
+  transform: rotate(45deg);
+}
+
+.mem-img-1 {
+  background-image: url('1.jpg');
+}
+
+.mem-img-2 {
+  background-image: url('2.jpg');
+}
+
+.mem-img-3 {
+  background-image: url('3.jpg');
+}
+
+.mem-img-4 {
+  background-image: url('4.jpg');
+}
+
+.mem-img-5 {
+  background-image: url('5.jpg');
+}
+
+.mem-img-6 {
+  background-image: url('6.jpg');
 }
