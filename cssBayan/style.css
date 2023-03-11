@@ -90,6 +90,14 @@ h1 {
   transform: rotate(45deg);
 }
 
+.mem-item:active .mem-title {
+  color: rgb(14, 96, 219);
+}
+
+.mem-item:active .mem-img {
+  filter: opacity(60%);
+}
+
 .mem-img-1 {
   background-image: url('1.jpg');
 }
