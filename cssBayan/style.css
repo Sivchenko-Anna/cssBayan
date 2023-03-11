@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  background-color: #f5f5eb;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.mems:hover .mem-item {
+  color: black;
+}
+
+.mems:hover .mem-icon {
+  display: block;
+}
+
+.mem-item {
+  border-top: 1px solid rgba(189, 187, 187, 0.637);
+  color: rgb(14, 96, 219);
+  transition: color .2s ease-out;
+}
+
+.mem-item:hover .mem-img {
+  display: block;
+}
+
+.mem-item:hover .mem-icon {
+  transform: rotate(45deg);
+}
+
+.mem-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  font-size: 0.8rem;
+}
+
+.mem-icon {
+  display: none;
+  transition: transform .3s ease-out;
+}
+
+.mem-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.mem-img {
+  width: 10rem;
+  height: 10rem;
+  display: none;
+  animation: show 1.5s forwards;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.mem-input:checked ~ .mem-img {
+  display: block;
+}
+
+.mem-input:checked + .mem-title {
+  color: black;
+}
+
+.mem-input:checked + .mem-title .mem-icon {
+  transform: rotate(45deg);
+}
+
+.mem-item:active .mem-title {
+  color: rgb(14, 96, 219);
+}
+
+.mem-item:active .mem-img {
+  filter: opacity(60%);
+}
+
+.mem-img-1 {
+  background-image: url('1.jpg');
+}
+
+.mem-img-2 {
+  background-image: url('2.jpg');
+}
+
+.mem-img-3 {
+  background-image: url('3.jpg');
+}
+
+.mem-img-4 {
+  background-image: url('4.jpg');
+}
+
+.mem-img-5 {
+  background-image: url('5.jpg');
+}
+
+.mem-img-6 {
+  background-image: url('6.jpg');
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+  .mem-title {
+    font-size: 1rem;
+    padding: 16px 0;
+  }
+  
+  .mem-img {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .mem-title {
+    font-size: 1.4rem;
+    padding: 20px 0;
+  }
+
+  .mem-img {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .mem-title {
+    font-size: 1.8rem;
+    padding: 30px 0;
+    cursor: pointer;
+  }
+
+  .mem-item {
+    cursor: pointer;
+  }
+
+  .mem-img {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  .mem-title {
+    font-size: 2.4rem;
+    padding: 40px 0;
+  }
+
+  .mem-img {
+    width: 60rem;
+    height: 60rem;
+  }
+}
